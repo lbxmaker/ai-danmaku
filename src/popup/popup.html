@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>AI Danmaku Generator</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>AI弹幕生成器</h1>
+    
+    <div class="status-section">
+      <div class="status-indicator">
+        <span id="status-icon" class="status-icon"></span>
+        <span id="status-text">检查中...</span>
+      </div>
+    </div>
+    
+    <div class="controls-section">
+      <div class="control-item">
+        <label for="enabled-toggle">启用插件</label>
+        <label class="switch">
+          <input type="checkbox" id="enabled-toggle" checked>
+          <span class="slider round"></span>
+        </label>
+      </div>
+      
+      <div class="control-item">
+        <label for="frequency-select">弹幕频率</label>
+        <select id="frequency-select">
+          <option value="low">低</option>
+          <option value="medium" selected>中</option>
+          <option value="high">高</option>
+        </select>
+      </div>
+      
+      <div class="control-item">
+        <label for="display-area-select">显示区域</label>
+        <select id="display-area-select">
+          <option value="full" selected>全屏</option>
+          <option value="half">半屏</option>
+          <option value="quarter">四分之一</option>
+        </select>
+      </div>
+      
+      <div class="control-item">
+        <label for="style-select">弹幕风格</label>
+        <select id="style-select">
+          <option value="standard" selected>标准</option>
+          <option value="funny">搞笑</option>
+          <option value="critical">批判</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="api-section">
+      <div class="api-key-input">
+        <label for="api-key">OpenAI API密钥</label>
+        <input type="password" id="api-key" placeholder="sk-...">
+      </div>
+      <button id="save-api-key">保存</button>
+    </div>
+    
+    <div class="footer">
+      <button id="options-button">高级设置</button>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

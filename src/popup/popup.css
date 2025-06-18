@@ -1,0 +1,190 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 300px;
+  background-color: #f5f5f5;
+}
+
+.container {
+  padding: 15px;
+}
+
+h1 {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.status-section {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+}
+
+.status-icon {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 8px;
+  background-color: #ccc;
+}
+
+.status-icon.active {
+  background-color: #4CAF50;
+}
+
+.status-icon.inactive {
+  background-color: #F44336;
+}
+
+.controls-section {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.control-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.control-item:last-child {
+  margin-bottom: 0;
+}
+
+/* 开关样式 */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+.slider.round {
+  border-radius: 20px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+select {
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+}
+
+.api-section {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.api-key-input {
+  margin-bottom: 10px;
+}
+
+.api-key-input label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.api-key-input input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0b7dda;
+}
+
+#save-api-key {
+  width: 100%;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+}
+
+#options-button {
+  background-color: transparent;
+  color: #2196F3;
+  border: 1px solid #2196F3;
+}
+
+#options-button:hover {
+  background-color: rgba(33, 150, 243, 0.1);
+}

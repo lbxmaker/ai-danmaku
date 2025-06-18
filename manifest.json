@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "AI Danmaku Generator",
+  "version": "1.0",
+  "description": "使用LLM自动生成视频弹幕",
+  "permissions": [
+    "storage",
+    "tabs",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://www.youtube.com/*",
+    "https://www.bilibili.com/*",
+    "https://api.openai.com/*"
+  ],
+  "background": {
+    "service_worker": "src/background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*", "*://www.bilibili.com/*"],
+      "js": ["src/utils/youtube.js", "src/utils/bilibili.js", "src/danmaku.js"]
+    }
+  ],
+  "action": {
+    "default_icon": {
+      "16": "assets/icon16.png",
+      "32": "assets/icon32.png",
+      "48": "assets/icon48.png"
+    },
+    "default_popup": "src/popup/popup.html"
+  },
+  "options_page": "src/options/options.html",
+  "icons": {
+    "16": "assets/icon16.png",
+    "32": "assets/icon32.png",
+    "48": "assets/icon48.png",
+    "128": "assets/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["src/utils/*.js"],
+      "matches": ["https://www.youtube.com/*", "https://www.bilibili.com/*"]
+    }
+  ]
+}
