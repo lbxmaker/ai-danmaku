@@ -3,7 +3,6 @@
 一个基于大语言模型（LLM）和多智能体（Multi-Agent）架构的 Chrome 浏览器扩展。它能够“观看”视频、“阅读”字幕，并为 YouTube 和 Bilibili 自动生成个性化、场景化的高质量实时弹幕。
 <img width="1387" height="1058" alt="image" src="https://github.com/user-attachments/assets/75205724-7bf3-4c2b-a8b3-f77ddadf2522" />
 <img width="1379" height="1055" alt="image" src="https://github.com/user-attachments/assets/8a979c82-540c-4523-9508-d4fe8d8e3e34" />
-<img width="547" height="572" alt="image" src="https://github.com/user-attachments/assets/2c988126-1eed-49db-a3a0-bbdad185567a" />
 ## ✨ 核心功能特点 (Features)
 
 * 🎭 **多智能体协作架构 (CrewAI-inspired)**
@@ -18,7 +17,7 @@
 * ⚙️ **极致的自定义体验**
     * **外观控制**：自定义弹幕的字体大小、透明度、速度、颜色（支持按 Agent 角色分配专属颜色或随机色彩），以及显示区域（全屏/半屏/四分之一屏）。
     * **AI 调优**：自由组合启用的 Agent，甚至可以单独调节每个 Agent 的“温度值 (Temperature)”来控制生成的创造力。
-    * 
+<img width="547" height="572" alt="image" src="https://github.com/user-attachments/assets/2c988126-1eed-49db-a3a0-bbdad185567a" />
 ## 🛠️ 安装指南 (Installation)
 
 由于本项目目前在开发阶段（未上架 Chrome Web Store），请通过“开发者模式”本地安装：
